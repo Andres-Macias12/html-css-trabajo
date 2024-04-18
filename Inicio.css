@@ -1,0 +1,708 @@
+/* Define variables para los colores principales */
+:root {
+  --color-primary: #035503;
+  --color-secondary: #7D613C;
+  --color-accent: #7a4615;
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --color-hover: #77d37c;
+  --color-button: #d47f10;
+}
+
+/* Importa la fuente Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset CSS básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+  font-family: "Montserrat", sans-serif; /* Usa la fuente Montserrat para todo el cuerpo */
+}
+
+/* Contenedor principal para limitar el ancho del contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+/* Estilos para el encabezado */
+.header {
+  display: flex;
+  position: relative;
+}
+
+/* Estilos para el menú de navegación */
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* Estilos para el logo en el menú */
+.logo img {
+  width: 170px;
+  height: 170px;
+}
+
+/* Estilos para los elementos del menú */
+.menu .navbar ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu .navbar ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.menu .navbar ul li a {
+  font-size: 20px;
+  padding: 10px;
+  color: var(--color-accent); /* Usa la variable para el color de acento */
+  display: block;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Oculta el checkbox para el menú en pantallas más pequeñas */
+#menu {
+  display: none;
+}
+
+/* Estilos para el icono del menú */
+.menu-icono {
+  width: 25px;
+}
+
+/* Muestra el menú cuando se activa el checkbox */
+#menu:checked ~ .navbar {
+  display: initial;
+}
+
+/* Estilos para el fondo del encabezado */
+.bg {
+  position: absolute;
+  width: 600px;
+  z-index: -1;
+  right: 0;
+}
+
+.sp {
+  position: absolute;
+  top: 600px;
+  bottom: 0;
+  width: 230px;
+}
+
+/* Estilos para la información del encabezado */
+.header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  text-shadow: 1px 1px 1px rgba(5, 145, 5, 0.2);
+}
+
+/* Estilos para el texto del encabezado */
+.header-txt {
+  position: relative;
+  width: 90%;
+  padding-right: 20px;
+}
+
+/* Estilos para las partes del texto del encabezado */
+.first-part {
+  color: var(--color-primary); /* Usa la variable para el color primario */
+}
+
+.second-part {
+  color: var(--color-secondary); /* Usa la variable para el color secundario */
+  margin-left: 30px;
+}
+
+.tercer-part {
+  color: var(--color-secondary); /* Usa la variable para el color secundario */
+  margin-left: 30px;
+}
+
+/* Estilos para el título del encabezado */
+.header-txt h1 {
+  font-size: 55px;
+  line-height: 70px;
+  font-weight: 600;
+  color: rgb(29, 148, 14); /* Usa un valor RGB específico para el color */
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+/* Estilos para el párrafo del encabezado */
+.header-txt p {
+  font-size: 15px;
+  color: rgba(2, 2, 2, 2);
+  margin-bottom: 50px;
+}
+
+/* Estilos para los botones */
+.btn-1 {
+  display: inline-block;
+  background-color: var(--color-button); /* Usa la variable para el color del botón */
+  padding: 13px 30px;
+  border-radius: 25px;
+  color: #fff;
+  text-transform: capitalize;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la imagen del encabezado */
+.header-img {
+  width: 100%;
+}
+
+.header-img img {
+  width: 600px;
+}
+
+/* Estilos para la sección "Nosotros" */
+.nosotros {
+  position: relative;
+}
+
+/* Estilos para el fondo de la sección "Nosotros" */
+.bg-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1700px;
+  z-index: -1;
+  color: var(--color-primary); /* Usa la variable para el color primario */
+}
+
+/* Estilos para el contenedor de la sección "Nosotros" */
+.nosotros{
+  padding: 30px 0;
+}
+.nosotros .container {
+  max-width: 1200px;
+  margin: 0 1;
+  padding: 0 17px; /* Ajusta el relleno del contenedor según sea necesario */
+  
+}
+
+/* Estilos para la información de la sección "Nosotros" */
+.nosotros-info {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para la imagen de la sección "Nosotros" */
+.nosotros-img {
+  width: 50%;
+}
+
+.nosotros-img img {
+  width: 550px;
+}
+
+/* Estilos para el texto de la sección "Nosotros" */
+.nosotros-txt {
+  width: 50%;
+}
+
+.nosotros-txt h2 {
+  font-size: 40px;
+  color: rgb(29, 148, 14);
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nosotros-txt span {
+  font-size: 25px;
+  color: rgb(29, 148, 14);
+  font-weight: 600;
+  margin-bottom: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: -10;
+  height: 10;
+}
+
+.nosotros-txt p {
+  font-size: 30px;
+  color: rgb(5, 5, 5);
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.mission-vision {
+  padding: px;
+  text-align: center;
+  width: auto;
+  margin: auto;
+  background-color: #a5e9a3;
+}
+
+.mission-vision .container {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+}
+
+.mission-vision-item {
+  display: flex;
+  width: 100%; /* Ancho del contenedor */
+  margin-bottom: 0px; /* Espacio entre las tarjetas */
+  border: 0px solid #77d37c;
+  border-radius: 10px;
+  overflow: hidden; /* Para evitar que la imagen sobresalga */
+  margin: 2px;
+}
+
+.mission-vision-text {
+  padding: 3px; /* Espaciado interno */
+  flex: 50px; /* Ocupa todo el espacio disponible */
+}
+
+.mission-vision-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.mission-vision-text p {
+  font-size: 1em;
+  line-height: 1.2;
+  text-align: justify;
+  color: var(--color-text);
+}
+
+.mission-vision-image {
+  width: 40%; /* Ancho de la imagen */
+  flex-shrink: 0; /* Evita que la imagen se contraiga */
+  margin-right: 70px; /* Margen a la derecha para separar la imagen del texto */
+}
+
+.mission-vision-image img {
+  display: block; /* Para centrar la imagen */
+  margin: px; /* Para centrar horizontalmente */
+  max-width: 130%; /* Para que la imagen no sobresalga */
+  height: auto;
+  border-radius: 10px;
+}
+
+.services {
+  background-color: #a5e9a3;
+  padding: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.title {
+  color:var(--color-accent);
+  font-size: 2.0rem;
+}
+
+.text {
+  color: #0a0101;
+  font-size: 1.6rem;
+  margin: 16px;
+}
+.cardss {
+  display: flex; /* Establece el contenedor como un contenedor de flexbox */
+  justify-content: space-between; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+  width: 100%; /* Establece el ancho del contenedor al 100% del contenedor padre */
+}
+
+.card-container {
+  width: calc(31.31% - 1.6rem); /* Para que haya tres elementos en una fila */
+  max-width: 290px;
+  margin: 5rem 0.9rem;
+  background-color: var(--color-background); /* Color de fondo */
+  border: solid 8px var(--dark-two); /* Borde */
+  border-radius: 12px; /* Borde redondeado */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Sombra */
+}
+
+.card {
+  position: relative;
+  width: 100%; /* Ajuste del ancho para ocupar todo el espacio del contenedor */
+  min-height: 500px;
+  background-color: var(--light-three);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: rem 0rem;
+  overflow: hidden;
+  border: solid 4px var(--dark-two);
+  border-radius: 10%;
+}
+
+.card:before {
+  content: attr(data-card);
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--main-color);
+  opacity: 0.026;
+}
+
+
+.icon {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.card .title-sm {
+  line-height: -1;
+  color: var(--color-primary);
+  font-size: 15px;
+  text-align: center;
+}
+
+.card .text {
+  font-size: 17px;
+  margin: 1.11rem ;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+
+/* Estilos para la sección de productos */
+.products {
+  padding: 8px;
+  text-align: center;
+  width: auto;
+  margin: auto;
+  margin-block: 19px;
+}
+
+.products h2 {
+  font-size: 45px;
+  color: #af6e23;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+
+.products p {
+  font-size: 26px;
+  color: #000;
+  margin-bottom: 19px;
+  padding: 0 200px;
+}
+
+.product-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 3rem;
+}
+
+.cards {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(5, 94, 12, 0.3);
+  color: #ac9119;
+}
+
+.cards:hover {
+  background-color: #77d37c;
+  transform: scale(1.08);
+  margin: 4px;
+}
+
+.cards img {
+  width: 100%;
+  border-radius: 25px 25px 0 ;
+}
+
+.cards h3 {
+  font-size: 15px;
+  color: #13790a;
+  margin-top: 30px;
+  margin: 5;
+}
+
+.cards p {
+  font-size: 16px;
+  padding: 5px;
+  color: #030200;
+  margin: 12px;
+  text-align: center;
+}
+
+.cards span {
+  display: inline-block;
+  background-color: #1d7e10;
+  padding: 10px;
+  color: #f1f1f1;
+  border-radius: 5px;
+  margin: 9px;
+}
+
+
+
+.custom-section {
+  position: relative; /* Establecer posición relativa para contener la imagen de fondo */
+  padding: 250px; /* Ajuste de espacio interno */
+}
+
+.custom-column {
+  display: flex;
+  flex-direction: column; /* Cambiar la dirección a columna para cards verticales */
+  align-items: center; /* Para centrar horizontalmente */
+}
+
+.custom-column img {
+  max-width: 0%; /* Ajustar el ancho máximo de la imagen al contenedor */
+  height: auto;
+  margin-bottom: 10px; /* Añadir espacio entre la imagen y el texto */
+}
+
+.custom-column h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  text-align: center; /* Centrar el texto */
+}
+
+.custom-column p {
+  color: #a58787;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0 1px; /* Añadir margen a los lados del texto */
+}
+.cardsss {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(5, 94, 12, 0.3);
+  margin-bottom: -0px;
+}
+
+.cards img {
+  width: 40%;
+  border-radius: 1px 11px ;
+  display: block;
+  margin: auto;
+}
+
+.cards h2 {
+  font-size: 24px;
+  color: #099910;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+.cards p {
+  font-size: 16px;
+  color: #000;
+  margin: 0 40px 50px;
+  text-align: justify;
+}
+
+.contact-section {
+  background-color: #77d37c;
+  padding: 50px 0;
+}
+
+.contact-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-section .section-title {
+  text-align: center;
+  font-size: 2.7rem;
+  margin-bottom: 23px;
+  color: #fff;
+}
+
+.contact-section .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-section .contact-info,
+.contact-section .contact-form {
+  width: calc(50% - 20px);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section .contact-info .text {
+  font-size: 1.9rem;
+  margin-bottom: 23px;
+}
+
+.contact-section .information-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .information {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.contact-section .contact-icon {
+  margin-right: 14px;
+  color: #035503;
+  text-align: center;
+}
+
+.contact-section .info-text {
+  font-size: 1.5rem;
+}
+
+.contact-section .contact-form .title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.contact-section .form-group {
+  margin-bottom: 0px;
+}
+
+.contact-section .contact-input {
+  width: calc(50% - 5px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #65b84e;
+  border-radius: 13px;
+}
+
+.contact-section .textarea {
+  height: 150px;
+  width: calc(100% - 12px);
+}
+
+.contact-section .btn {
+  background-color: #409607;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section .btn:hover {
+  background-color: #2ec910;
+}
+
+
+/* Estilos para la línea horizontal */
+hr {
+  border: 9px solid #fff;
+}
+
+/* Estilos para el pie de página */
+.footer {
+  background-color: #ffffff;
+  padding: 50px 0;
+  border-top: 2px solid #2ec910;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 12000;
+}
+
+.footer-column {
+  flex-basis: 25%;
+  text-align: center;
+  margin-bottom: 27px;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+.footer-description {
+  font-size: 14px;
+  color: #666;
+  text-align: justify;
+}
+
+.footer-column h3 {
+  font-size: 19px;
+  color: #409607;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.footer-column ul li {
+  margin-bottom: 1px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.socials img {
+  width: 35px;
+  height: auto;
+}
+
+.footer-copyright {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-copyright p {
+  font-size: 19px;
+  color: #0b8f28;
+}
